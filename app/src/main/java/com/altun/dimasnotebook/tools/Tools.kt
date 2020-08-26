@@ -7,7 +7,11 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
 import com.altun.dimasnotebook.R
+import com.altun.dimasnotebook.room.DatabaseBuilder
+import com.altun.dimasnotebook.room.NoteModel
+import kotlinx.android.synthetic.main.add_item_layout.*
 import kotlinx.android.synthetic.main.dialog_layout.*
+import kotlinx.coroutines.*
 
 object Tools {
     fun showDialog(context: Context, title: String, description: String) {
@@ -27,4 +31,8 @@ object Tools {
         }
         dialog.show()
     }
+
+
+
+
 }

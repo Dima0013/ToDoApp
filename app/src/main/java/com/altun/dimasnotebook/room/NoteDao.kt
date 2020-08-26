@@ -1,9 +1,7 @@
 package com.altun.dimasnotebook.room
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
+
 
 @Dao
 interface NoteDao {
@@ -22,6 +20,9 @@ interface NoteDao {
 
     @Insert
     suspend fun insert(user: NoteModel)
+
+    @Update
+    suspend fun updateItem(noteModel: NoteModel)
 
     @Delete
     suspend fun delete(user: NoteModel)

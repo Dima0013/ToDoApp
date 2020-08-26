@@ -33,6 +33,7 @@ class NoteRecyclerViewAdapter(private val items: MutableList<NoteModel>) :
             model = items[adapterPosition]
             currentPosition = adapterPosition + 1
             itemView.titleTextView.text = model.title
+            itemView.numberTextView.text = currentPosition.toString()
             itemView.setOnClickListener {
                 Tools.showDialog(itemView.context, model.title!!, model.description!!)
             }
